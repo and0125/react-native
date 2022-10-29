@@ -9,7 +9,9 @@ export default function CategoryItem({ name, imageUrl, index, active, handlePres
         <TouchableOpacity onPress={handlePress}>
         <View style={[styles.container, 
                     styles.elevation, 
-                    index ===0 ? {marginLeft: 25} : {marginLeft: 10},
+                    index ===0 
+                    ? {marginLeft: 25} 
+                    : {marginLeft: 10},
                     active 
                     ? {backgroundColor: "rgb(241,186,87)"} 
                     : {backgroundColor: "white"},
