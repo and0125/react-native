@@ -7,7 +7,7 @@ export default function Search() {
     return (
         <View style={[styles.container, styles.elevation]}>
             <FontAwesome name="search" size={25} />
-            <TextInput  style={styles.input}
+            <TextInput  style={styles.textInput}
                 placeholder="Restaurant, Food" />
         </View>
     );
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
         borderRadius: 50,
     },
     elevation,
-    input: {
+    textInput: {
         fontSize: 20,
         marginLeft: 10,
     },
