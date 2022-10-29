@@ -4,8 +4,8 @@ import { View, Text, StyleSheet } from 'react-native';
 export default function Header() {
     return (
     <View style={styles.container}>
-    <Text style={styles.lightHeader}>Grab Your</Text>
-    <Text style={styles.boldHeader}>Delicious Meal</Text>
+    <Text style={styles.lightHeader}>Grab your</Text>
+    <Text style={styles.boldHeader}>delicious meal!</Text>
     </View>
     );
 }

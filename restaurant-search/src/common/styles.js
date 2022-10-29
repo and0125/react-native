@@ -1,6 +1,6 @@
 export const elevation = {
         shadowColor: "black",
-        shadowOffset: {width: 10, height: 5},
-        elevation: 30,
-        shadowOpacity: .25,
+        shadowOffset: {width: 3, height: 5},
+        elevation: 50,
+        shadowOpacity: .5,
 }

@@ -17,9 +17,9 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: "row",
         marginTop: 15,
-        marginHorizontal: 50,
+        marginHorizontal: 10,
         backgroundColor:"white",
-        padding: 3,
+        padding: 5,
         borderRadius: 50,
     },
     elevation,

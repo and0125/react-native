@@ -181,3 +181,47 @@ You apply this like the constant styles, but you make a list of styles in the ta
 ## reusing components with Props
 
 This is for making a component that is re-usable with different data, but has the same format. These may even have some different styles for selection. in this example, They were using different icons and words for different foods.
+
+Props is a concept that makes the component re-usable.
+
+For instance, the `style` inside the tag of an element is a prop. You pass data into the prop to adjust the component the way that we want to.
+
+The `source` is also a prop.  Right now we hard code these into the files, but we can render them dynamically.
+
+For any custom component we can give them custom props and call them whatever we want.
+
+we can make custom props in the App.js file to use.
+
+we grab props from what gets entered in the parentheses of the function we're defining for the component.
+
+the initial way we did this is to define the props in the App.js file, but we want to do this in a better way.
+
+## Flatlist rendering
+
+This is the best way to render multiple re-usable components.
+
+First we separate all the data for our components in an array. This could be done in the App.js file, or be sent from a database.
+
+So instead of rendering the data with one component, you add a FlatList compoenent in App.js.
+
+We also provide a `keyExtractor` to extract the key from the object in the array. This allows us to remove data from the array passed in easily, without having to re-render the entire list.
+
+You might need to work with the styling of a flatlist with margins and stuff, but you would not put a view around the flatlist to do this. 
+
+Instead, you would do this by extracting the index of the element in the flatlist. Each element in our array has an index and it can be extracted, and you can pass this in as a prop. 
+
+Then you can do conditional expressions based on the elements index.  We did this and defined a tertiary (3 equal sign) prop in the CategoryItem component, so that we had a conditional rendering, one choice if the item was first (index 0) and another if the item is not first.
+
+## State
+
+Next we want to change the selection of the category based on the click event of the user.
+
+This is done through the concept of state. The current state of your app may be that the burger category is selected, but when you click on dessert it is the active category, and the state has changed.
+
+This is what state is, the current state of your application, and state is what can change and change the UI of the application.
+
+State will be a search term, which is will have a default set. We have th ability to change the search term from one category to another. This will change the background color of the selected item.
+
+You could use another prop to access the active state of your application but this would make changing the state difficult. This is because a variable can change, but our components don't re-render just because of this. So every time a state change happens, we need to re-render. By assigning this state change to a variable, we don't know when the state changes.
+
+We use a built in hook from react called `useState` which is a proper way to manage the state of your application. 
