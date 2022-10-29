@@ -4,6 +4,7 @@ import Header  from "./src/components/Header";
 import Search from "./src/components/Search";
 import CategoryItem from "./src/components/CategoryItem";
 import { useState } from "react";
+import Categories from "./src/components/Categories";
 
 
 export default function App() {
@@ -45,22 +46,12 @@ export default function App() {
       <Header />
       <StatusBar/>
       <Search setTerm={setTerm}/>
-      {/* <CategoryItem name="burger" imageUrl={require("./src/assets/images/burger.png")}/> */}
-     <FlatList 
-        data={commonCategories}
-        renderItem={ ({ item, index }) => {
-          return <CategoryItem 
-                  name= {item.name}
-                  imageUrl={item.imageUrl}
-                  index = {index}
-                  active = {item.name === term}
-                  handlePress={() => setTerm(item.name)}
-          />;
-        }}
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        keyExtractor= {(category) => category.name}
-     />
+      <Categories
+      categories= {commonCategories}
+      setTerm={setTerm}
+      term={term}
+      />
+    
     </View>
 
   );

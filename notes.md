@@ -245,3 +245,7 @@ We want a touchable opacity because its not present visually, but we can wrap an
 We can use these concepts to handle the search bar. 
 
 What we want to do is to update the term searched for that effects the state of the category, from the user input in the search bar.
+
+## Housekeeping
+
+We did a lot within our App.js file with the flat list, and we can move that into its own component and then render it. 
