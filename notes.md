@@ -225,3 +225,17 @@ State will be a search term, which is will have a default set. We have th abilit
 You could use another prop to access the active state of your application but this would make changing the state difficult. This is because a variable can change, but our components don't re-render just because of this. So every time a state change happens, we need to re-render. By assigning this state change to a variable, we don't know when the state changes.
 
 We use a built in hook from react called `useState` which is a proper way to manage the state of your application. 
+
+Then we can update the state of the application based on user events.
+
+## User Events
+
+we want to handle the event of clicking, and this will color the background. There are plenty of events that react-native can handle, but we want to use click events. 
+
+Only two components that respond to a press event, the first is a button, and the second is touchable opacity.
+
+We use TouchableOpacity for this use case.
+
+This is because a button is limited; it can't be used with all the children we would want to. Buttons restrict the area a person can click on, and because of that, it's limiting. 
+
+We want a touchable opacity because its not present visually, but we can wrap any component with touchable opacity, and handle clicks on anything contained within that touchable opacity.

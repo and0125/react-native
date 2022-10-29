@@ -9,7 +9,7 @@ import { useState } from "react";
 export default function App() {
   // this is how we start to render things in the App
 
-  const [term, ] = useState("Burger")
+  const [term, setTerm ] = useState("Burger");
 
   const commonCategories = [
     {
@@ -54,6 +54,7 @@ export default function App() {
                   imageUrl={item.imageUrl}
                   index = {index}
                   active = {item.name === term}
+                  handlePress={() => setTerm(item.name)}
           />;
         }}
         horizontal

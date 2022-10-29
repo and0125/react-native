@@ -1,15 +1,19 @@
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import {elevation} from '../common/styles';
 import {ImageResizeMode} from 'react-native/Libraries/Image/ImageResizeMode';
 
 
 
-export default function CategoryItem({ name, imageUrl, index, active}) {
+export default function CategoryItem({ name, imageUrl, index, active, handlePress}) {
     return (
+        <TouchableOpacity onPress={handlePress}>
         <View style={[styles.container, 
                     styles.elevation, 
                     index ===0 ? {marginLeft: 25} : {marginLeft: 10},
-                    active ? {backgroundColor: "rgb(241,186,87)"} : {backgroundColor: "white`"}]}
+                    active 
+                    ? {backgroundColor: "rgb(241,186,87)"} 
+                    : {backgroundColor: "white"},
+                ]}
                     >
             <View style={styles.imageContainer}>
                 <Image 
@@ -19,6 +23,7 @@ export default function CategoryItem({ name, imageUrl, index, active}) {
             </View>
             <Text style={styles.header}>{name}</Text>
         </View>
+ </TouchableOpacity>
     );
 }
 
@@ -28,7 +33,6 @@ const styles = StyleSheet.create({
         height: 100, 
         borderRadius: 50,
         marginVertical: 15,
-        // marginHorizontal: 25,
         backgroundColor: 'white',
         alignItems: 'center',
         justifyContent: "center",
