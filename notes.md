@@ -177,3 +177,7 @@ This is useful for making container styles consistent.
 You apply this like the constant styles, but you make a list of styles in the tag of the element.
 
 **Note:** the app commonly goes out of sync, so the best thing you can do when you want to see new changes that aren't going through is to reboot the app from the command line, then reload the app.
+
+## reusing components with Props
+
+This is for making a component that is re-usable with different data, but has the same format. These may even have some different styles for selection. in this example, They were using different icons and words for different foods.
