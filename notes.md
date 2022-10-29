@@ -230,7 +230,7 @@ Then we can update the state of the application based on user events.
 
 ## User Events
 
-we want to handle the event of clicking, and this will color the background. There are plenty of events that react-native can handle, but we want to use click events. 
+we want to handle the event of clicking, and this will color the background. There are plenty of events that react-native can handle, but we want to use click events.
 
 Only two components that respond to a press event, the first is a button, and the second is touchable opacity.
 
@@ -239,3 +239,9 @@ We use TouchableOpacity for this use case.
 This is because a button is limited; it can't be used with all the children we would want to. Buttons restrict the area a person can click on, and because of that, it's limiting. 
 
 We want a touchable opacity because its not present visually, but we can wrap any component with touchable opacity, and handle clicks on anything contained within that touchable opacity.
+
+## More Events and States
+
+We can use these concepts to handle the search bar. 
+
+What we want to do is to update the term searched for that effects the state of the category, from the user input in the search bar.
