@@ -10,6 +10,7 @@ export default function Search({setTerm}) {
     const handleEndEditing = () => {
         if (!input) return
         setTerm(input);
+        setInput("");
     }
 
     return (
@@ -18,6 +19,7 @@ export default function Search({setTerm}) {
             <TextInput  
                 style={styles.textInput}
                 placeholder="Restaurant, Food" 
+                value={input}
                 onChangeText={
                     (text) => {setInput(text)
                     }}
