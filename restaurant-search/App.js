@@ -44,7 +44,7 @@ export default function App() {
     <View style={styles.container}>
       <Header />
       <StatusBar/>
-      <Search />
+      <Search setTerm={setTerm}/>
       {/* <CategoryItem name="burger" imageUrl={require("./src/assets/images/burger.png")}/> */}
      <FlatList 
         data={commonCategories}
